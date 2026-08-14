@@ -1,0 +1,33 @@
+{
+  "owner": "sre",
+  "kubernetes": {
+    "requests_limits": true,
+    "autoscaling": true,
+    "multi_az": true,
+    "pdb": true
+  },
+  "ingest": {
+    "backpressure": true,
+    "queue_alert": true,
+    "capacity_headroom_percent": 40
+  },
+  "slo": {
+    "availability": 99.95,
+    "freshness_seconds": 30,
+    "error_budget_policy": true
+  },
+  "clickhouse": {
+    "replication": true,
+    "retention_policy": true,
+    "capacity_alerts": true
+  },
+  "observability": ["logs", "metrics", "traces"],
+  "tenant_isolation": true,
+  "workload_identity": true,
+  "managed_secrets": true,
+  "progressive_delivery": true,
+  "automatic_rollback": true,
+  "runbook": "docs/incident-playbook.md",
+  "oncall_owner": "sre-oncall",
+  "cost_owner": "platform"
+}
