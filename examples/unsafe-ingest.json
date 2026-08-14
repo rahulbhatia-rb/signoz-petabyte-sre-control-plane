@@ -1,0 +1,33 @@
+{
+  "owner": null,
+  "kubernetes": {
+    "requests_limits": false,
+    "autoscaling": false,
+    "multi_az": false,
+    "pdb": false
+  },
+  "ingest": {
+    "backpressure": false,
+    "queue_alert": false,
+    "capacity_headroom_percent": 5
+  },
+  "slo": {
+    "availability": 99.0,
+    "freshness_seconds": 300,
+    "error_budget_policy": false
+  },
+  "clickhouse": {
+    "replication": false,
+    "retention_policy": false,
+    "capacity_alerts": false
+  },
+  "observability": ["logs"],
+  "tenant_isolation": false,
+  "workload_identity": false,
+  "managed_secrets": false,
+  "progressive_delivery": false,
+  "automatic_rollback": false,
+  "runbook": null,
+  "oncall_owner": null,
+  "cost_owner": null
+}
